@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects{% endblock title %}
+{% load static %}
+{% block content %}
+<section class="projects-section center-column">
+    <h2>Projects</h2>
+    <div class="projects-list">
+        <!-- all cards here -->
+        <div class="project-card">
+            <a href="https://github.com/notfreephilly" target="_blank">
+                <img src="{% static './img/goofy.png' %}" alt="">
+                <p>First project name</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, laudantium.</p>
+                <p>YYYY</p>
+                <div class="skills-list center-row">
+                    <label for="" class="label-text">yo</label>
+                    <label for="" class="label-text">tengo</label>
+                    <label for="" class="label-text">hambre</label>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock content %}

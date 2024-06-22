@@ -1,8 +1,48 @@
 {% extends 'base.html' %}
 
 {% block title %}{% endblock title %}
-
+{% load static %}
 {% block content %}
-<h1>About ya boy</h1>
+<section class="about-section center-row">
+    <div class="about-logo-container center-row">
+        <img src="{% static './img/goofy.png' %}" alt="">
+    </div>
+
+    <div class="about-description-container center-column">
+        <h1>Full Stack Developer</h1>
+        <h2>Now Accepting Positions</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi facere eum eos maxime laboriosam
+            exercitationem animi soluta ab illum incidunt deserunt pariatur minima ullam explicabo, autem
+            repudiandae aut aliquam voluptate esse, provident in fugiat vero quo tenetur! Nam fugit, veniam
+            necessitatibus distinctio id ea commodi alias voluptas odit similique debitis, dolor veritatis harum
+            eaque non repellendus architecto facilis unde delectus officiis neque, laudantium nisi saepe. Numquam
+            provident aperiam ducimus ipsa modi nemo voluptates sapiente possimus!
+            Lorem ipsum dolor sit ame t consectetur adipisicing elit. Id perspiciatis incidunt nobis dolor neque
+            perferendis maiores dolorem reiciendis minus aliquid ducimus non unde nostrum voluptate in aliquam ipsa,
+            hic enim laudantium ad nihil ut iure, porro illo? Facere eius nihil id quia optio fugit eum nulla, modi
+            unde qui hic.
+        </p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A voluptatum dolorem mollitia suscipit
+            similique minima cupiditate quam laborum velit deserunt quas alias id inventore dolor, architecto quia
+            ipsam deleniti adipisci soluta nisi? Magnam pariatur placeat laborum libero sint distinctio molestias
+            praesentium veritatis doloribus facilis, maxime rerum natus rem fuga porro!</p>
+
+        <div class="label-container center-column">
+            <h2>Skills</h2>
+
+            <div class="label-list center-row">
+                <label for="" class="label-text">HTML</label>
+                <label for="" class="label-text">CSS</label>
+                <label for="" class="label-text">JavaScript</label>
+                <label for="" class="label-text">Python</label>
+                <label for="" class="label-text">React</label>
+                <label for="" class="label-text">Flask</label>
+                <label for="" class="label-text">Django</label>
+                <label for="" class="label-text">Figma</label>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 {% endblock content %}
