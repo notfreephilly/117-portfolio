@@ -4,22 +4,26 @@
 {% load static %}
 {% block content %}
 <section class="projects-section center-column">
+    {% if user.is_authenticated %}
+    <button class="btn-primary">Add Project</button>
+    {% endif %}
     <h2>Projects</h2>
     <div class="projects-list">
-        <!-- all cards here -->
+        {% for project in projects %}
         <div class="project-card">
-            <a href="https://github.com/notfreephilly" target="_blank">
-                <img src="{% static './img/goofy.png' %}" alt="">
-                <p>First project name</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, laudantium.</p>
-                <p>YYYY</p>
+            <a href="{{ project.repository }}" target="_blank">
+                <img src="{{ project.image.url }}" alt="">
+                <p>{{ project.name }}</p>
+                <p>{{ project.description }}</p>
+                <p>{{ project.year }}</p>
                 <div class="skills-list center-row">
-                    <label for="" class="label-text">yo</label>
-                    <label for="" class="label-text">tengo</label>
-                    <label for="" class="label-text">hambre</label>
+                    {% for tech in project.technologies.all %}
+                    <label for="" class="label-text">{{ tech.name }}</label>
+                    {% endfor %}
                 </div>
             </a>
         </div>
+        {% endfor %}
     </div>
 </section>
 {% endblock content %}
