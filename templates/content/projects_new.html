@@ -7,5 +7,18 @@
 {% block content %}
 <section class="new-project-section">
     <h2>New Project</h2>
-</section>
-{% endblock content %}
+
+    <form id="projectform" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ forms.name }}
+        {{ forms.description }}
+        {{ forms.year }}
+        {{ forms.repository }}
+        {{ forms.technologies }}
+
+        <div class="controls">
+            <button type="reset" class="btn-primary">Reset Form</button>
+            <button type="submit" class="btn-primary">Save Project</button>
+        </div>
+    </form </section>
+    {% endblock content %}

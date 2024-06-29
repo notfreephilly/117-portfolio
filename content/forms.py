@@ -4,7 +4,7 @@ from  .models import Project
 class Projectform(forms.ModelForm):
     class Meta:
         model = Project
-        field = ["name", "description", "year", "image", "repository", "technologies"]
+        fields = ["name", "description", "year", "image", "repository", "technologies"]
 
         widgets = {
             "name": form.TextInput(attrs={"placeholder": "Project Name"}),
